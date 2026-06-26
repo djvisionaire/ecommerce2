@@ -11,17 +11,17 @@ async function renderBooks(filter) {
   
   booksWrapper.classList.remove('books__loading')
 
-  if (filter === "LOW_TO_HIGH") {
+  if (filter === "Low_To_High") {
     books.sort(
       (a, b) =>
         (a.salePrice || a.originalPrice) - (b.salePrice || b.originalPrice)
     );
-  } else if (filter === "HIGH_TO_LOW") {
+  } else if (filter === "High_To_Low") {
     books.sort(
       (a, b) =>
         (b.salePrice || b.originalPrice) - (a.salePrice || a.originalPrice)
     );
-  } else if (filter === "RATING") {
+  } else if (filter === "Rating") {
     books.sort((a, b) => b.rating - a.rating);
   }
 
